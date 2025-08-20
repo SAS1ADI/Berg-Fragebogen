@@ -143,7 +143,7 @@ export default function WanderFragebogen() {
 
   return (
 <div
-  className="p-6 max-w-xl mx-auto space-y-6 bg-cover bg-center bg-no-repeat"
+  className="p-6 max-w-xl mx-auto space-y-6 bg-cover bg-center bg-no-repeat text-red-600"
   style={{
     backgroundImage: "url('https://www.tirol.at/images/oqEJOcge2Nw/rs:fill:1180:767/dpr:1.5/cb:/g:ce/aHR0cHM6Ly91cGxvYWRzLm1hcHNlcnZpY2VzLmV1L25lZm9zX3Rpcm9sL3NpdGUtZmlsZXMvMTA1OS91cGxvYWRzL3RoYW5lbGxlcl9hdXNzaWNodF9oZWlfMl8yMDE0MDEwLmpwZw')",
     backgroundPosition: "center center",
@@ -151,13 +151,13 @@ export default function WanderFragebogen() {
     backgroundRepeat: "no-repeat"
   }}
 >
-  <h1 className="text-2xl font-bold text-center bg-white bg-opacity-70 p-2 rounded">
+  <h1 style={{ color: '#ff0000' }} className="text-2xl font-bold text-center bg-white bg-opacity-70 p-2 rounded">
     Wander-Fragebogen
   </h1>
 
       {questions.map((q, qIndex) => (
         <div key={qIndex} className="bg-white bg-opacity-80 rounded-xl shadow p-4 space-y-2">
-          <p className="font-semibold">{q.text}</p>
+          <p style={{ color: '#ff0000' }} className="font-semibold">{q.text}</p>
           {q.options.map((opt, oIndex) => (
             <div key={oIndex}>
               <label className="flex items-center space-x-2">
@@ -170,7 +170,7 @@ export default function WanderFragebogen() {
                     JSON.stringify(answers[qIndex]) === JSON.stringify(opt.peaks)
                   }
                 />
-                <span>{opt.text}</span>
+                <span className="text-red-600">{opt.text}</span>
               </label>
             </div>
           ))}
@@ -178,7 +178,7 @@ export default function WanderFragebogen() {
       ))}
 
       {result && (
-        <div className="bg-green-50 bg-opacity-90 rounded-xl shadow p-4 text-center font-medium">
+        <div className="bg-green-50 bg-opacity-90 rounded-xl shadow p-4 text-center font-medium text-red-600">
           Empfohlener Gipfel: {result.name} <br />
           Ausgangspunkt: {result.start} <br />
           Gehzeit: {result.duration}
