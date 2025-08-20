@@ -40,3 +40,11 @@
 .read-the-docs {
   color: #888;
 }
+.mein-bild {
+  width: 300px;          /* gewünschte Breite */
+  height: 200px;         /* gewünschte Höhe */
+  object-fit: cover;     /* Bild füllt den Container */
+  object-position: center; /* mittig zentrieren */
+  display: block;
+  margin: 0 auto;        /* horizontal zentrieren */
+}

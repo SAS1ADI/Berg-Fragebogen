@@ -142,13 +142,18 @@ export default function WanderFragebogen() {
   }, [answers]);
 
   return (
-    <div
-      className="p-6 max-w-xl mx-auto space-y-6 bg-cover bg-center"
-      style={{ backgroundImage: "url('https://upload.wikimedia.org/wikipedia/commons/5/5d/Thaneller.jpg')" }}
-    >
-      <h1 className="text-2xl font-bold text-center bg-white bg-opacity-70 p-2 rounded">
-        Wander-Fragebogen
-      </h1>
+<div
+  className="p-6 max-w-xl mx-auto space-y-6 bg-cover bg-center bg-no-repeat"
+  style={{
+    backgroundImage: "url('https://www.tirol.at/images/oqEJOcge2Nw/rs:fill:1180:767/dpr:1.5/cb:/g:ce/aHR0cHM6Ly91cGxvYWRzLm1hcHNlcnZpY2VzLmV1L25lZm9zX3Rpcm9sL3NpdGUtZmlsZXMvMTA1OS91cGxvYWRzL3RoYW5lbGxlcl9hdXNzaWNodF9oZWlfMl8yMDE0MDEwLmpwZw')",
+    backgroundPosition: "center center",
+    backgroundSize: "cover",
+    backgroundRepeat: "no-repeat"
+  }}
+>
+  <h1 className="text-2xl font-bold text-center bg-white bg-opacity-70 p-2 rounded">
+    Wander-Fragebogen
+  </h1>
 
       {questions.map((q, qIndex) => (
         <div key={qIndex} className="bg-white bg-opacity-80 rounded-xl shadow p-4 space-y-2">
